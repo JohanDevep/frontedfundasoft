@@ -58,7 +58,7 @@ function Navbar() {
               <button onClick={() => navigate("/login")} type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Iniciar Sesion</button>
             </li>
             <li className='py-2 lg:py-0 text-center'>
-              <button type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Registrarme</button>
+              <button onClick={() => navigate("/registrarme")} type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Registrarme</button>
             </li>
           </ul>
         </div>
