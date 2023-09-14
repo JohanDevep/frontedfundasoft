@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 function Footer() {
     return (
         <div className="di">
@@ -10,8 +11,7 @@ function Footer() {
                             <img
                                 className="h-[120px] w-[226px]"
                                 alt="Logo blanco"
-                                src="https://generation-sessions.s3.amazonaws.com/e8ea0a83929f6409af7b718bce2f46a6/img/logo-blanco-1-1@2x.png"
-                            />
+                                src="https://generation-sessions.s3.amazonaws.com/e8ea0a83929f6409af7b718bce2f46a6/img/logo-blanco-1-1@2x.png" />
                             <p className="text-white text-base md:text-lg p-5 w-full md:w-96 text-left">
                                 Impacto de nuestras actuaciones en el bienestar y el desarrollo de las mujeres con las que trabajamos.
                             </p>
@@ -40,13 +40,16 @@ function Footer() {
                                     <span className="text-white text-base md:text-lg">3186929471</span>
                                 </p>
                                 <div className="text-white text-base md:text-lg">www.fundasoftmiss.com</div>
-                                <img className="img mt-4" alt="Frame" src="https://generation-sessions.s3.amazonaws.com/e8ea0a83929f6409af7b718bce2f46a6/img/frame-16-1.svg" />
+                                <div className="p-4">
+                                    <FontAwesomeIcon icon={faFacebook}  style={{ color: "#f4ec10" }} className='h-8 px-2' />
+                                    <FontAwesomeIcon icon={faTwitter}  style={{ color: "#f4ec10" }} className='h-8 px-2' />
+                                    <FontAwesomeIcon icon={faYoutube}  style={{ color: "#f4ec10" }} className='h-8 px-2' />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
-
             <div className='w-full items-center flex flex-col-reverse md:flex-row bg-[#c23099] px-4 py-4 md:px-24 text-center'>
                 <div className="md:flex items-center text-lg">
                     <span>&copy;2023 FundaSoff Miss.</span>
