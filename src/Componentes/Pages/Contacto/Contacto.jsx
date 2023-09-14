@@ -42,7 +42,7 @@ function Contacto() {
                 </div>
               </div>
               <div className="text-center text-xl mt-2">
-                +573186929471
+                +57 3186929471
               </div>
             </div>
             <div className="rounded-lg border-2 border-gray-400 p-4 sm:p-5 mb-8">

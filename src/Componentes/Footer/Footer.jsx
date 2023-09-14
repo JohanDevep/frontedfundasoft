@@ -50,7 +50,7 @@ function Footer() {
                     </div>
                 </div>
             </footer>
-            <div className='w-full items-center flex flex-col-reverse md:flex-row bg-[#c23099] px-4 py-4 md:px-24 text-center'>
+            <div className='w-full items-center flex flex-col-reverse md:flex-row bg-[#c23099] px-4 py-4 md:px-24 text-center justify-between'>
                 <div className="md:flex items-center text-lg">
                     <span>&copy;2023 FundaSoff Miss.</span>
                     <span className="hidden md:inline-block">Todos los derechos reservados</span>

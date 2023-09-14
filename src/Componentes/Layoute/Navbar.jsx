@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import logonav from '../images/logo-nav/logo.png'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   return (
 
@@ -52,7 +55,7 @@ function Navbar() {
               </a>
             </li>
             <li className='py-2 lg:py-0 text-center'>
-              <button type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Iniciar Sesion</button>
+              <button onClick={() => navigate("/login")} type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Iniciar Sesion</button>
             </li>
             <li className='py-2 lg:py-0 text-center'>
               <button type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Registrarme</button>
@@ -61,6 +64,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
+
 
   )
 }
