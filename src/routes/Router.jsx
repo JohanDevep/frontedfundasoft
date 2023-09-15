@@ -4,6 +4,8 @@ import Home from '../Componentes/Pages/Home/Home';
 import Cursos from '../Componentes/Pages/Cursos/Cursos';
 import Intructores from '../Componentes/Pages/Instructores/Instructores';
 import Contacto from '../Componentes/Pages/Contacto/Contacto';
+import IniciarSesion from '../Componentes/Login/IniciarSesion/IniciarSesion';
+import Registrarme from '../Componentes/Login/Registro/Registro';
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -13,6 +15,8 @@ export const router = createBrowserRouter(
                 <Route element={<Cursos />} path="/cursos" />
                 <Route element={<Intructores />} path="/instructores" />
                 <Route element={<Contacto />} path="/contactos" />
+                <Route element={<IniciarSesion />} path="/login" />
+                <Route element={<Registrarme />} path="/registrarme" />
             </Route>
         </>
     )

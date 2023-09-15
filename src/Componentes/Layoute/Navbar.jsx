@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
-import logonav from '../images/logo-nav/logo.png'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logonav from "../images/logo-nav/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
+  const navigate = useNavigate();
 
+  return (
     <nav className="bg-white dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
         <a className="flex items-center">
-          <img src={logonav} className="h-15" />
+          <img src={logonav} className="h-16 sm:h-16 md:h-16 lg:h-20 xl:h-24" />
         </a>
         <div className="block lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
+            className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400 bg-gray-200 hover:bg-gray-300"
           >
             <svg
               className={`fill-current h-8 w-8 ${isOpen ? "hidden" : "block"}`}
@@ -32,40 +34,68 @@ function Navbar() {
             </svg>
           </button>
         </div>
-        <div className={`items-center block justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? "block" : "hidden"}`}>
-          <ul className="flex flex-col md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <a href="/" className="md:bg-transparent md:text-[#9A1B76] text-[#9A1B76] hover:text-[#db43b0] md:p-0 md:hover:text-[#db43b0]">
+        <div
+          className={`items-center block justify-between w-full md:flex md:w-auto md:order-1 ${
+            isOpen ? "block" : "hidden"
+          }`}
+        >
+          <ul className="flex flex-col md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 p-5">
+            <li className="py-2 lg:py-0 text-lg text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex lg:pt-0">
+              <a
+                href="/"
+                className="md:bg-transparent md:text-[#9A1B76] text-[#9A1B76] hover:text-[#db43b0] md:p-0 md:hover:text-[#db43b0]"
+              >
                 Inicio
               </a>
             </li>
-            <li>
-              <a href="/cursos" className="md:bg-transparent md:text-[#9A1B76] text-[#9A1B76] hover:text-[#db43b0] md:p-0 md:hover:text-[#db43b0]">
+            <li className="py-2 lg:py-0 text-lg text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex lg:pt-0">
+              <a
+                href="/cursos"
+                className="md:bg-transparent md:text-[#9A1B76] text-[#9A1B76] hover:text-[#db43b0] md:p-0 md:hover:text-[#db43b0]"
+              >
                 Cursos
               </a>
             </li>
-            <li>
-              <a href="/instructores" className="md:bg-transparent md:text-[#9A1B76] text-[#9A1B76] hover:text-[#db43b0] md:p-0 md:hover:text-[#db43b0]">
+            <li className="py-2 lg:py-0 text-lg text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex lg:pt-0">
+              <a
+                href="/instructores"
+                className="md:bg-transparent md:text-[#9A1B76] text-[#9A1B76] hover:text-[#db43b0] md:p-0 md:hover:text-[#db43b0]"
+              >
                 Instructores
               </a>
             </li>
-            <li>
-              <a href="/contactos" className="md:bg-transparent md:text-[#9A1B76] text-[#9A1B76] hover:text-[#db43b0] md:p-0 md:hover:text-[#db43b0]">
+            <li className="py-2 lg:py-0 text-lg text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex lg:pt-0">
+              <a
+                href="/contactos"
+                className="md:bg-transparent md:text-[#9A1B76] text-[#9A1B76] hover:text-[#db43b0] md:p-0 md:hover:text-[#db43b0]"
+              >
                 Contactos
               </a>
             </li>
+
             <li>
-              <button type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Registrarme</button>
+              <button
+                onClick={() => navigate("/login")}
+                type="button"
+                className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full"
+              >
+                Iniciar Sesion
+              </button>
             </li>
-            <li>
-              <button type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Iniciar Sesion</button>
+            <li className="py-2 lg:py-0 text-center">
+              <button
+                onClick={() => navigate("/registrarme")}
+                type="button"
+                className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full"
+              >
+                Registrarme
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

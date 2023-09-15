@@ -1,27 +1,27 @@
-import imagen2 from '../imagenes/image2.png'
-import imagen3 from '../imagenes/image3.png'
-import imagen4 from '../imagenes/image4.png'
-import imagen5 from '../imagenes/image5.png'
+import imagencapa2 from '../Imagenes/image2capa.png'
+import imagencapa3 from '../Imagenes/image3capa.png'
+import imagencapa4 from '../Imagenes/image4capa.png'
+import imagencapa5 from '../Imagenes/image5capa.png'
 
 export default [
     {
       id: 0,
-        imagen: imagen2,
+        imagen: imagencapa2,
         descripcion: "Desarrollo de páginas web"
     },
     {
         id: 1,
-        imagen: imagen3,
+        imagen: imagencapa3,
         descripcion: "Desarrollo de software empresarial."
     },
     {
         id: 2,
-        imagen: imagen4,
+        imagen: imagencapa4,
         descripcion: "Desarrollo de software a la medida."
     },
     {
         id: 3,
-        imagen: imagen5,
+        imagen: imagencapa5,
         descripcion: "Desarrollo de aplicaciones móviles."
     }
 ]
