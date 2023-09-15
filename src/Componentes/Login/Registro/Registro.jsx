@@ -1,11 +1,13 @@
 import React from "react";
+import RegistroImg from "./Image/Registro.png"
 
 function Registro() {
   return (
-    <div class="bg-gradient-to-r from-violet-100 to-violet-200"> 
+    <div class="bg-gradient-to-r"> 
       <div className="flex justify-center p-10">
+        <img src={RegistroImg} class="h-[583px] rounded-l-lg hidden lg:inline-block"/>
         <div class="w-full max-w-md max-h-15">
-          <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <form class="bg-white shadow-md rounded-r-lg px-8 pt-6 pb-8 mb-4">
             
             <div class="flex flex-row items-center justify-center lg:justify-center">
               <p class="block text-[#9A1B76] text-lg font-bold mb-2">
