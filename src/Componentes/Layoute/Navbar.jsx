@@ -5,10 +5,15 @@ import logonav from '../images/logo-nav/logo.png'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const token = window.localStorage.getItem("token")
+
   const navigate = useNavigate();
 
+  const LimpiarToken = () => {
+    window.localStorage.removeItem("token")
+    navigate('/');
+  }
   return (
-
     <nav className="bg-white dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
         <a className="flex items-center">
@@ -55,16 +60,24 @@ function Navbar() {
               </a>
             </li>
             <li className='py-2 lg:py-0 text-center'>
-              <button onClick={() => navigate("/login")} type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Iniciar Sesion</button>
+              <button style={{ display: `${token ? "none" : "block"} ` }} onClick={() => navigate("/login")} type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">
+                Iniciar Sesion
+              </button>
             </li>
             <li className='py-2 lg:py-0 text-center'>
-              <button onClick={() => navigate("/registrarme")} type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">Registrarme</button>
+              <button style={{ display: `${token ? "none" : "block"} ` }} onClick={() => navigate("/registrarme")} type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">
+                Registrarme
+              </button>
+            </li>
+            <li className='py-2 lg:py-0 text-center'>
+              <button onClick={LimpiarToken} style={{ display: `${token ? "block" : "none"} ` }} type="button" className="text-white bg-[#9A1B76] hover:bg-[#db43b0] py-1.5 px-5 text-lg font-semibold rounded-full">
+                Cerrar Sesion
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
 
   )
 }
