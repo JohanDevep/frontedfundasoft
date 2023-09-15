@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import imageninicio from '../../images/Iniciarses-imagen/InicioImagen.png';
 
 
 function IniciarSesion() {
@@ -65,8 +66,10 @@ function IniciarSesion() {
                     </section>
                 ) : (
                     <section>
-                        <div className="flex justify-end p-10">
-                            <div class="w-full max-w-md max-h-15">
+                        
+                        <div className="flex justify-end p-10 gap-32">
+                            <img className="rounded-lg ml-28 w-[200px] sm:w-[250px] lg:w-[700px] md-show" alt="login it's time" src={imageninicio} />
+                            <div class="w-full max-w-md max-h-15 pt-20">
                                 <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                                     <div class="mb-4">
                                         <label
