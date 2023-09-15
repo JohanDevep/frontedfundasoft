@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
     return (
@@ -10,49 +12,53 @@ function Footer() {
                             <img
                                 className="h-[120px] w-[226px]"
                                 alt="Logo blanco"
-                                src="https://generation-sessions.s3.amazonaws.com/e8ea0a83929f6409af7b718bce2f46a6/img/logo-blanco-1-1@2x.png"
-                            />
+                                src="https://generation-sessions.s3.amazonaws.com/e8ea0a83929f6409af7b718bce2f46a6/img/logo-blanco-1-1@2x.png" />
                             <p className="text-white text-base md:text-lg p-5 w-full md:w-96 text-left">
                                 Impacto de nuestras actuaciones en el bienestar y el desarrollo de las mujeres con las que trabajamos.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 gap-4 md:gap-6 sm:grid-cols-2">
+                        <div className="grid grid-cols-1 gap-4 md:gap-16 sm:grid-cols-2">
                             <div>
                                 <h2 className="mb-4 md:mb-6 text-[24px] md:text-[32px] font-semibold text-white uppercase">Cursos Populares</h2>
-                                <div className="text-white text-base md:text-lg underline">Marketing Digital</div>
-                                <p className="text-white text-base md:text-lg underline">Instalación y configuración de redes de internet.</p>
-                                <div className="text-white text-base md:text-lg underline">Desarrollo de páginas web</div>
-                                <div className="text-white text-base md:text-lg underline">Desarrollo de aplicaciones móviles.</div>
-                                <p className="text-white text-base md:text-lg underline">Instalación de cámaras de seguridad.</p>
+                                <div className="mb-2 md:mb-2.5 text-white text-base md:text-lg underline">Marketing Digital</div>
+                                <p className="mb-1 md:mb-1.5 text-white text-base md:text-lg underline">Instalación y configuración de redes de internet.</p>
+                                <div className="mb-1.5 md:mb-2 text-white text-base md:text-lg underline">Desarrollo de páginas web</div>
+                                <div className="mb-1.5 md:mb-2 text-white text-base md:text-lg underline">Desarrollo de aplicaciones móviles.</div>
+                                <p className=" text-white text-base md:text-lg underline">Instalación de cámaras de seguridad.</p>
                             </div>
                             <div>
                                 <h2 className="mb-4 md:mb-6 text-[24px] md:text-[32px] font-semibold text-white uppercase">Contáctanos</h2>
-                                <p className="direcci-n-AV-a">
+                                <p className="mb-1.5 md:mb-2 direcci-n-AV-a">
                                     <span className="text-white text-base md:text-lg font-bold">Dirección: </span>
                                     <span className="text-white text-base md:text-lg">AV 26 # 26 A - 05 B/Las Granjas</span>
                                 </p>
-                                <p className="email-fundasoftmiss">
+                                <p className="mb-1 md:mb-1.5 email-fundasoftmiss">
                                     <span className="text-white text-base md:text-lg font-bold">Email:</span>
                                     <span className="text-white text-base md:text-lg"> fundasoftmiss@gmail.com</span>
                                 </p>
-                                <p className="div-2">
+                                <p className="mb-1.5 md:mb-2 div-2">
                                     <span className="text-white text-base md:text-lg font-bold">Teléfono: </span>
                                     <span className="text-white text-base md:text-lg">3186929471</span>
                                 </p>
                                 <div className="text-white text-base md:text-lg">www.fundasoftmiss.com</div>
-                                <img className="img mt-4" alt="Frame" src="https://generation-sessions.s3.amazonaws.com/e8ea0a83929f6409af7b718bce2f46a6/img/frame-16-1.svg" />
+                                <div className="p-4">
+                                    <FontAwesomeIcon icon={faFacebook}  style={{ color: "#f4ec10" }} className='h-8 px-2' />
+                                    <FontAwesomeIcon icon={faTwitter}  style={{ color: "#f4ec10" }} className='h-8 px-2' />
+                                    <FontAwesomeIcon icon={faYoutube}  style={{ color: "#f4ec10" }} className='h-8 px-2' />
+                                </div>                            
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
 
-            <div className='w-full items-center flex flex-col-reverse md:flex-row bg-[#c23099] px-4 py-4 md:px-24 text-center'>
+           
+            <div className='w-full  flex flex-col-reverse md:flex-row bg-[#c23099] px-4 py-4 md:px-24 text-center justify-between'>
                 <div className="md:flex items-center text-lg">
                     <span>&copy;2023 FundaSoff Miss.</span>
                     <span className="hidden md:inline-block">Todos los derechos reservados</span>
                 </div>
-                <div className="md:flex leading-normal gap-4 md:gap-10 underline text-lg mt-2 md:mt-0 ">
+                <div className="md:flex leading-normal gap-4 md:gap-10 underline mt-2 md:mt-0 ">
                     <span>Políticas de Cookies</span>
                     <span>Términos y condiciones</span>
                 </div>
